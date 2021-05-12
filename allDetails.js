@@ -3,16 +3,16 @@ import {
   SafeAreaView,
   ImageBackground,
   View,
+  Dimensions,
+  Text,
+  TouchableOpacity,
+  TextInput,
   FlatList,
   StyleSheet,
-  Text,
-  Dimensions,
-  TouchableOpacity,
-  Image,
+  Image
 } from 'react-native';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 const {height, width} = Dimensions.get('window');
 const DATA = [
@@ -43,12 +43,11 @@ const DATA = [
   },
 ];
 
-const details = (props) => {
+const allDetails = (props) => {
   const Data = ({item, index}) => {
     console.log('item', item);
     return (
-      <TouchableOpacity
-        onPress={() => props.navigation.navigate('profilePage')}>
+      <TouchableOpacity onPress={() => props.navigation.navigate('UserProfile')}>
         <View style={styles.item}>
           <Image style={{height: 105, width: 115}} source={item.image} />
           <View style={styles.viewType}>
@@ -80,7 +79,7 @@ const details = (props) => {
           <TouchableOpacity
             style={{justifyContent: 'center', padding: 5}}
             onPress={() => props.navigation.goBack()}>
-            <AntIcon name="bars" style={{fontSize: height * 0.05}} />
+            <AntIcon name="arrowleft" style={{fontSize: height * 0.05}} />
           </TouchableOpacity>
         </View>
         <View
@@ -97,11 +96,89 @@ const details = (props) => {
               fontWeight: 'bold',
               color: 'black',
             }}>
-            Profile
+            All Details
           </Text>
         </View>
       </View>
-      <View style={{height: height * 0.87}}>
+      <View
+        style={{
+          marginTop: 15,
+          width: width * 0.97,
+          height: height * 0.08,
+          backgroundColor: '#DCEDC8',
+          borderRadius: 20,
+          borderWidth: 3,
+          alignSelf: 'center',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}>
+        <View
+          style={{
+            width: width * 0.31,
+            height: height * 0.06,
+            // backgroundColor: 'white',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Text
+            style={{
+              width: width * 0.3,
+              height: height * 0.035,
+              textAlign: 'center',
+              color: 'black',
+              fontSize: 22,
+              fontWeight: 'bold',
+              // backgroundColor:'yellow',
+            }}>
+            Approach
+          </Text>
+        </View>
+        <View
+          style={{
+            width: width * 0.31,
+            height: height * 0.06,
+            backgroundColor: 'white',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: 20,
+          }}>
+          <Text
+            style={{
+              width: width * 0.3,
+              height: height * 0.035,
+              textAlign: 'center',
+              color: 'black',
+              fontSize: 22,
+              fontWeight: 'bold',
+              // backgroundColor:'yellow',
+            }}>
+            Shortlised
+          </Text>
+        </View>
+        <View
+          style={{
+            width: width * 0.31,
+            height: height * 0.06,
+            // backgroundColor: 'white',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Text
+            style={{
+              width: width * 0.3,
+              height: height * 0.035,
+              textAlign: 'center',
+              color: 'black',
+              fontSize: 22,
+              fontWeight: 'bold',
+              // backgroundColor:'yellow',
+            }}>
+            Rejected
+          </Text>
+        </View>
+      </View>
+      <View
+        style={{height: height * 0.75, marginTop: 15}}>
         <FlatList
           data={DATA}
           renderItem={Data}
@@ -163,9 +240,9 @@ const styles = StyleSheet.create({
     // backgroundColor: 'pink',
     width: width * 0.56,
     height: height * 0.04,
-    fontSize: 28,
+    fontSize: 22,
     textAlign: 'center',
   },
 });
 
-export default details;
+export default allDetails;

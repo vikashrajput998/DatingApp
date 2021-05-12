@@ -219,7 +219,8 @@ class signUp extends Component {
                   marginLeft: 10,
                   width: width * 0.09,
                   height: height * 0.043,
-                  backgroundColor: 'yellow',
+                 // backgroundColor: 'yellow',
+                      backgroundColor:'rgba(255,255,255,0.3)',
                   borderRadius: 20,
                   borderWidth: 4,
                   alignSelf:'center'
@@ -264,7 +265,7 @@ class signUp extends Component {
               //   flexDirection: 'row',
             }}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('ProfilePage')}
+              onPress={() => this.props.navigation.navigate('logIn')}
               style={{
                 //   marginLeft: 1,
                 padding: 10,

@@ -59,14 +59,15 @@ class profilePage extends Component {
             height: height * 0.22,
             backgroundColor: 'white',
             // justifyContent:'center',
-            alignItems:'center',
-            alignSelf:'center',
-            flexDirection:'row'
+            alignItems: 'center',
+            alignSelf: 'center',
+            flexDirection: 'row',
           }}>
-            <View style={{
+          <View
+            style={{
               width: width * 0.45,
               height: height * 0.2,
-              backgroundColor:'pink'
+              backgroundColor: 'pink',
             }}></View>
           <View
             style={{
@@ -292,20 +293,23 @@ class profilePage extends Component {
                   borderWidth: 5,
                   flexDirection: 'row',
                 }}>
-                <Text
-                  style={{
-                    padding: 5,
-                    marginLeft: 1,
-                    width: width * 0.4,
-                    height: height * 0.05,
-                    // backgroundColor: 'yellow',
-                    textAlign: 'center',
-                    fontSize: 30,
-                    fontWeight: 'bold',
-                    color: 'black',
-                  }}>
-                  Yes
-                </Text>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('allDetails')}>
+                  <Text
+                    style={{
+                      padding: 5,
+                      marginLeft: 1,
+                      width: width * 0.4,
+                      height: height * 0.05,
+                      // backgroundColor: 'yellow',
+                      textAlign: 'center',
+                      fontSize: 30,
+                      fontWeight: 'bold',
+                      color: 'black',
+                    }}>
+                    Yes
+                  </Text>
+                </TouchableOpacity>
               </View>
               <View
                 style={{

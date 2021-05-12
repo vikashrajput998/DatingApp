@@ -3,8 +3,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import logIn from './loginPage';
 import signUp from './signUp';
-import ProfilePage from './profilePage'
-import Details from './details'
+import profilePage from './profilePage'
+import details from './details'
+import allDetails from './allDetails'
+import UserProfile from './UserProfile'
 
 const Stack = createStackNavigator();
 
@@ -18,8 +20,10 @@ const Navigation = () => {
         }}>
         <Stack.Screen name="logIn" component={logIn}></Stack.Screen>
         <Stack.Screen name="signUp" component={signUp}></Stack.Screen>
-        <Stack.Screen name="ProfilePage" component={ProfilePage}></Stack.Screen>
-        <Stack.Screen name="details" component={Details}></Stack.Screen>
+        <Stack.Screen name="profilePage" component={profilePage}></Stack.Screen>
+        <Stack.Screen name="details" component={details}></Stack.Screen>
+        <Stack.Screen name="allDetails" component={allDetails}></Stack.Screen>
+        <Stack.Screen name="UserProfile" component={UserProfile}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

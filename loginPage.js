@@ -11,8 +11,7 @@ import {
   Image,
 } from 'react-native';
 const {width, height} = Dimensions.get('window');
-class loginPage extends Component {
-  render() {
+function LoginPage (props) {
     return (
       <SafeAreaView style={{flex: 1}}>
         <ImageBackground
@@ -39,7 +38,7 @@ class loginPage extends Component {
               Login
             </Text>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('signUp')}>
+              onPress={() => props.navigation.navigate('signUp')}>
               <View
                 style={{
                   width: width * 0.62,
@@ -195,7 +194,7 @@ class loginPage extends Component {
               //   flexDirection: 'row',
             }}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('details')}
+              onPress={() => props.navigation.navigate('details')}
               style={{
                 //   marginLeft: 1,
                 padding: 10,
@@ -221,6 +220,6 @@ class loginPage extends Component {
         </ImageBackground>
       </SafeAreaView>
     );
-  }
+  
 }
-export default loginPage;
+export default LoginPage;
