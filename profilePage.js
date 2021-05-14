@@ -57,18 +57,11 @@ class profilePage extends Component {
           style={{
             width: width * 0.95,
             height: height * 0.22,
-            backgroundColor: 'white',
-            // justifyContent:'center',
+            // backgroundColor: 'white',
+            justifyContent: 'center',
             alignItems: 'center',
             alignSelf: 'center',
-            flexDirection: 'row',
           }}>
-          <View
-            style={{
-              width: width * 0.45,
-              height: height * 0.2,
-              backgroundColor: 'pink',
-            }}></View>
           <View
             style={{
               marginLeft: 10,
@@ -77,7 +70,7 @@ class profilePage extends Component {
               backgroundColor: 'pink',
               borderRadius: 100,
               borderWidth: 4,
-              alignSelf: 'flex-end',
+              alignSelf: 'center',
               justifyContent: 'center',
             }}>
             <EntypoIcon
