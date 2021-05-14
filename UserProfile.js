@@ -137,7 +137,7 @@ function UserProfile(props) {
               textAlign: 'center',
               fontWeight: 'bold',
               fontSize: 20,
-              color: 'green',
+              color: 'white',
             }}>
             It work on professional IT company in India.
           </Text>
@@ -152,30 +152,32 @@ function UserProfile(props) {
             alignItems: 'center',
             alignSelf: 'center',
           }}>
-          <View
-            style={{
-              marginLeft: 2,
-              width: width * 0.32,
-              height: height * 0.07,
-              backgroundColor: 'rgba(220, 231, 117, 0.3)',
-              borderWidth: 3,
-              borderRadius: 10,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Text
+          <TouchableOpacity onPress={() => props.navigation.navigate('UserDetails')}>
+            <View
               style={{
+                marginLeft: 2,
                 width: width * 0.32,
-                height: height * 0.04,
-                fontSize: 25,
-                fontWeight: 'bold',
+                height: height * 0.07,
+                backgroundColor: 'rgba(220, 231, 117, 0.3)',
+                borderWidth: 3,
+                borderRadius: 10,
                 alignItems: 'center',
-                textAlign: 'center',
-                color: 'white',
+                justifyContent: 'center',
               }}>
-              Approach
-            </Text>
-          </View>
+              <Text
+                style={{
+                  width: width * 0.32,
+                  height: height * 0.04,
+                  fontSize: 24,
+                  fontWeight: 'bold',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  color: 'white',
+                }}>
+                Approach
+              </Text>
+            </View>
+          </TouchableOpacity>
           <View
             style={{
               marginLeft: 2,
